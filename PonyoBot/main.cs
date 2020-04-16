@@ -62,7 +62,7 @@ namespace TestHoge
             var CommandContext = message.Content;
 
             // コマンド("ping")かどうか判定
-            if (CommandContext == "ping")
+            if (0 <= CommandContext.IndexOf("ping"))
             {
                 await message.Channel.SendMessageAsync("pong");
             }
